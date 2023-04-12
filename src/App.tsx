@@ -16,7 +16,10 @@ function App() {
       alert('Ningun lado del triangulo puede ser 0 o menor que 0 ');
       return;
     }
-
+     if ((lado1 >= lado2 + lado3) || (lado3 >= lado2 + lado1) || (lado2 >= lado3 + lado1)) {
+      alert('No es un triangulo, no cumple con la desigualdad triangular');
+      return;
+    }
     if (lado1 === lado2 && lado2 === lado3) {
       alert('El triangulo es equilátero');
       return;
